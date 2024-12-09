@@ -11,6 +11,31 @@ I wanted to note a couple of things before continuing in this guide.
 * Similarly, the terms `directory` (known in Linux) and `folder` (known in Windows) are used interchangeably.
 
 ## Table Of Contents
+* [Requirements](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons?tab=readme-ov-file#requirements)
+    * [Server Specs & Network Connection](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons?tab=readme-ov-file#server-specs--network-connection)
+    * [Port Forwarding](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons?tab=readme-ov-file#port-forwarding)
+* [Downloading & Running SteamCMD](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons?tab=readme-ov-file#downloading--running-steamcmd)
+    * [Windows](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons?tab=readme-ov-file#windows)
+    * [Linux](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons?tab=readme-ov-file#linux)
+* [Downloading The Server Files](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons?tab=readme-ov-file#downloading-the-server-files)
+* [Running The Garry's Mod Server](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons?tab=readme-ov-file#running-the-garrys-mod-server)
+    * [Windows](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons?tab=readme-ov-file#windows-2)
+    * [Linux](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons?tab=readme-ov-file#linux-2)
+        * [Using Screen](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons?tab=readme-ov-file#using-screen)
+* [Creating A Server Config File](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons?tab=readme-ov-file#creating-a-server-config-file)
+    * [Performance ConVars](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons?tab=readme-ov-file#performance-convars)
+* [Adding Mods (Addons)](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons?tab=readme-ov-file#adding-mods-addons)
+    * [Creating A Collection](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons?tab=readme-ov-file#creating-a-collection)
+    * [Adding Addons To The Collection](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons?tab=readme-ov-file#adding-addons-to-the-collection)
+    * [Automate Players Downloading Addon Client-Side Content](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons?tab=readme-ov-file#automate-players-downloading-addon-client-side-content)
+    * [Publishing The Collection](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons?tab=readme-ov-file#publishing-the-collection)
+    * [Link The Collection And Server](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons?tab=readme-ov-file#link-the-collection-and-server)
+* [Connect To The Server](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons?tab=readme-ov-file#connect-to-the-server)
+* [Frequently Asked Questions](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons?tab=readme-ov-file#frequenty-asked-questions)
+    * [How do I add myself as an admin on the server?](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons?tab=readme-ov-file#how-do-i-add-myself-as-an-admin-on-the-server)
+    * [How do I show and edit file extensions in Windows?](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons?tab=readme-ov-file#how-do-i-show-and-edit-file-extensions-in-windows)
+* [Additional Resources & Tools](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons?tab=readme-ov-file#additional-resources--tools)
+* [Conclusion](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons?tab=readme-ov-file#conclusion)
 
 ## Requirements
 ### Server Specs & Network Connection
@@ -118,12 +143,8 @@ You can now run the new `steamcmd.sh` program using the following command which'
 ## Downloading The Server Files
 Once you've launched SteamCMD, the first thing you'll need to do is set the directory where to install the Garry's Mod server files to via the `force_install_dir` command. In this guide, we will be installing the server inside of a directory called `gmod/` within whatever directory or folder we create for SteamCMD. Therefore, we'll be setting `force_install_dir` to `/home/servers/gmod` on Linux (or `E:\servers\gmod` on Windows).
 
-### Windows
-```bash
-force_install_dir E:\servers\gmod
-```
+For example, this is what it looks like on Linux.
 
-### Linux
 ```bash
 force_install_dir /home/servers/gmod
 ```
@@ -165,6 +186,8 @@ After creating the Batch file, add the following contents.
 @echo off
 .\srcds.exe -game garrysmod -console -ip 0.0.0.0 -port 27015 +maxplayers 32 +map gm_construct
 ```
+
+You should now be able to double-click the newly created Batch file to start the server!
 
 ### Linux
 After navigating to the server file's directory by executing `cd ~/gmod` or similar, you should see `srcds_run` and `srcds_linux` files inside of the directory. We will be creating a simple Bash script to start the server.
@@ -315,7 +338,7 @@ Finally, click the **Save and continue** button on the bottom-right to create th
 
 **NOTE** - If the collection is published and visible to others, users will be able to subscribe to all mods/addons from the collection with one click.
 
-### Adding Mods/Addons To The Collection
+### Adding Addons To The Collection
 The next step is to add mods/addons to your new collection and keep note of the IDs for later. You may browse workshop items for Garry's Mod using the steps mentioned above.
 
 In this guide, I will be installing the [gDisasters](https://steamcommunity.com/sharedfiles/filedetails/?id=1431470677) mod/addon which is one of my favorite addons in Garry's Mod. This addon adds weather and nature events such as tornadoes, earth quakes, rain, snowstorms, and more! This single addon also requires a few other additional addons which contains materials and such.
@@ -340,7 +363,7 @@ The ID of the above addon is `1431470677`. Keep a note of the ID(s) you extract 
 
 If you do not see a URL in the Steam application, read this under the F.A.Q.
 
-### Automate Players Downloading Mod/Addon Client-Side Content
+### Automate Players Downloading Addon Client-Side Content
 It is recommended you allow players that join your server to automatically download client-side files for the mod(s)/addon(s) you've added to your collection. To do this, we need to create a Lua script and use the [`resource.AddWorkshop("<id>")`](https://wiki.facepunch.com/gmod/resource.AddWorkshop) function.
 
 For organization, we're going to technically create an addon on the file system.
