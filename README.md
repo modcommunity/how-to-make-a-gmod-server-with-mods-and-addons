@@ -178,7 +178,7 @@ To save time, we're going to create scripts to start the Garry's Mod server.
 ### Windows
 When looking at the new server files through the File Explorer, you should see a file named `srcds.exe`.
 
-We will be creating a [Batch](https://en.wikipedia.org/wiki/Batch_file) file/script named `start-server.bat` to run the server. Before creating this file, you will need to ensure you can set the file's extension by ensuring you're able to view extensions in file names. If you can't view file extensions, read here.
+We will be creating a [Batch](https://en.wikipedia.org/wiki/Batch_file) file/script named `start-server.bat` to run the server. Before creating this file, you will need to ensure you can set the file's extension by ensuring you're able to view extensions in file names. If you can't view file extensions, read [here](#how-do-i-show-and-edit-file-extensions-in-windows).
 
 After creating the Batch file, add the following contents.
 
@@ -349,7 +349,7 @@ This will bring up a checkbox list of all collections you own. Ensure to check t
 
 ![Workshop Add To Collection](./images/workshop_addtocol.png)
 
-Next, we'll need to extract the ID from the URL. The numberic ID is located after the `id` query paramenter in the URL.
+Next, we'll need to extract the ID from the URL. The numeric ID is located after the `id` query parameter in the URL.
 
 ![Workshop Addon URL](./images/workshop_modurl.png)
 
@@ -406,7 +406,7 @@ You will now need to publish the collection. Head back to the collection you've 
 
 ![Workshop Publish](./images/workshop_pubcol.png)
 
-Next, you'll want to extract the ID of the collection by using a similar process to extracting the ID of a mod/addon. The numberic ID is located after the `id` query parameter in the URL when viewing your collection.
+Next, you'll want to extract the ID of the collection by using a similar process to extracting the ID of a mod/addon. The numeric ID is located after the `id` query parameter in the URL when viewing your collection.
 
 ![Workshop Get Collection ID](./images/workshop_getcolid.png)
 
@@ -468,7 +468,7 @@ Once you've fully connected, the addons you've installed should be running on th
 
 ![gDisaster Menu Item](./images/gmod_gdisasters.png)
 
-**NOTE** - To spawn items from mods/addons through the spawn menu, you may need to add yourself as an admin to the server. To do this, read here.
+**NOTE** - To spawn items from mods/addons through the spawn menu, you may need to add yourself as an admin to the server. To do this, read [here](#how-do-i-add-myself-as-an-admin-on-the-server).
 
 ## Frequenty Asked Questions
 ### How do I add myself as an admin on the server?
@@ -503,6 +503,6 @@ I just wanted to provide some helpful resources and tools for server owners who 
 ## Conclusion
 That sums up this guide, but I hope to create many more guides in the future! By this point, you should have a functioning Garry's Mod server with one or more mods/addons installed.
 
-If you see anything that can be improved on or added, please feel free to reply to the thread!
+If you see anything that can be improved on or added, please feel free to reply to the [thread](https://moddingcommunity.com/topic/221-how-to-make-a-garrys-mod-server-with-mods-addons/)!
 
 Guide made by [Christian Deacon](https://github.com)
