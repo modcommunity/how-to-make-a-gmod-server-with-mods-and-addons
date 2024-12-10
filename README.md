@@ -493,7 +493,46 @@ The name can be anything as it's used for organization. My Steam ID is `STEAM_0:
 Afterwards, restart the server and reconnect. You should now have admin or superadmin!
 
 ### How do I show and edit file extensions in Windows?
-*To Do...*
+To view hidden file extensions in Windows 11, through File Explorer, click **View** -> **Show** and ensure the **File name extensions** box is checked.
+
+This process is very similar in other versions of Windows as well.
+
+To show file name extensions on other versions of Windows, I'd recommend checking out [this](https://www.howtogeek.com/205086/beginner-how-to-make-windows-show-file-extensions) guide!
+
+### Can I make a script to automatically update the server files?
+Yes, this is possible! Please follow the below steps.
+
+#### Windows
+We will create an `update-server.bat` Batch file inside of the folder where the `start-server.bat` is located (root of the server files folder) with the following contents.
+
+```batch
+@echo off
+set STEAM_CMD_LOC="E:\servers\steamcmd"
+set STEAM_USER="anonymous"
+set STEAM_PASS=""
+
+set INSTALL_DIR="..\gmod"
+set APP_ID="4020"
+
+cd "%STEAM_CMD_LOC%"
+start "" steamcmd.exe +force_install_dir "%INSTALL_DIR%" +login "%STEAM_USERNAME%" "%STEAM_PASSWORD%" +app_update %APP_ID% validate +quit
+```
+
+#### Linux
+We will create an `update-server.sh` Bash script inside of the directory where the `start-server.sh` file is located (root of the server files directory) with the following contents.
+
+```bash
+#!/bin/bash
+STEAM_CMD_LOC=../steamcmd/steamcmd.sh
+STEAM_USER="anonymous"
+STEAM_PASS=""
+
+INSTALL_DIR=../gmod
+
+APP_ID=4020
+
+$STEAM_CMD_LOC +force_install_dir $INSTALL_DIR +login "$STEAM_USER" "$STEAM_PASS" +app_update $APP_ID validate +quit
+```
 
 ## Additional Resources & Tools
 I just wanted to provide some helpful resources and tools for server owners who want to improve their management experience in Garry's Mod.
