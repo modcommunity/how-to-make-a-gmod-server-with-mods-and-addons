@@ -34,6 +34,7 @@ I wanted to note a couple of things before continuing in this guide.
 * [Frequently Asked Questions](#frequenty-asked-questions)
     * [How do I add myself as an admin on the server?](#how-do-i-add-myself-as-an-admin-on-the-server)
     * [How do I show and edit file extensions in Windows?](#how-do-i-show-and-edit-file-extensions-in-windows)
+    * [Can I make a script to automatically update the server files?](#can-i-make-a-script-to-automatically-update-the-server-files)
 * [Additional Resources & Tools](#additional-resources--tools)
 * [Conclusion](#conclusion)
 
@@ -171,6 +172,8 @@ app_update 4020 validate
 ```
 
 It will take some time to download the server files depending on your network and disk speeds. After you're done, you may navigate to the directory you've installed the server into.
+
+**NOTE** - If you want to create a script to create or update the server, read [here](#can-i-make-a-script-to-automatically-update-the-server-files)!
 
 ## Running The Garry's Mod Server
 To save time, we're going to create scripts to start the Garry's Mod server.
@@ -500,7 +503,11 @@ This process is very similar in other versions of Windows as well.
 To show file name extensions on other versions of Windows, I'd recommend checking out [this](https://www.howtogeek.com/205086/beginner-how-to-make-windows-show-file-extensions) guide!
 
 ### Can I make a script to automatically update the server files?
-Yes, this is possible! Please follow the below steps.
+Yes, this is possible!
+
+We will create a script with environmental variables that allows you to easily configure the locations of SteamCMD and your server files along with what app ID to download, etc.
+
+Please follow the below steps.
 
 #### Windows
 We will create an `update-server.bat` Batch file inside of the folder where the `start-server.bat` is located (root of the server files folder) with the following contents.
@@ -523,7 +530,7 @@ We will create an `update-server.sh` Bash script inside of the directory where t
 
 ```bash
 #!/bin/bash
-STEAM_CMD_LOC=../steamcmd/steamcmd.sh
+STEAM_CMD_LOC=../steamcmd/
 STEAM_USER="anonymous"
 STEAM_PASS=""
 
@@ -531,7 +538,7 @@ INSTALL_DIR=../gmod
 
 APP_ID=4020
 
-$STEAM_CMD_LOC +force_install_dir $INSTALL_DIR +login "$STEAM_USER" "$STEAM_PASS" +app_update $APP_ID validate +quit
+$STEAM_CMD_LOC/steamcmd.sh +force_install_dir $INSTALL_DIR +login "$STEAM_USER" "$STEAM_PASS" +app_update $APP_ID validate +quit
 ```
 
 ## Additional Resources & Tools
