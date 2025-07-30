@@ -4,7 +4,7 @@
 
 </div>
 
-In this guide, I will be showing you how to make and run a [Garry's Mod](https://store.steampowered.com/app/4000/Garrys_Mod/) server with **mods** (addons) on both [Windows](https://www.microsoft.com/en-us/windows?r=1) and Linux!
+A guide on how to set up a [Garry's Mod](https://store.steampowered.com/app/4000/Garrys_Mod/) server and download and install **mods** (addons) on both [Windows](https://www.microsoft.com/en-us/windows?r=1) and Linux!
 
 [**View Guide On TMC (Recommended Due To Better Formatting)**](https://forum.moddingcommunity.com/t/how-to-make-a-garrys-mod-server-install-addons-2025/41)
 
