@@ -39,7 +39,7 @@ I wanted to note a couple of things before continuing in this guide.
     * [Publishing The Collection](#publishing-the-collection)
     * [Link The Collection And Server](#link-the-collection-and-server)
 * [Connect To The Server](#connect-to-the-server)
-* [Frequently Asked Questions](#frequenty-asked-questions)
+* [Frequently Asked Questions](#frequently-asked-questions)
     * [How do I add myself as an admin on the server?](#how-do-i-add-myself-as-an-admin-on-the-server)
     * [How do I show and edit file extensions in Windows?](#how-do-i-show-and-edit-file-extensions-in-windows)
     * [Can I make a script to automatically update the server files?](#can-i-make-a-script-to-automatically-update-the-server-files)
