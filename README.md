@@ -1,4 +1,12 @@
+<div align="center">
+
+![Banner](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons/raw/main/images/banner.png)
+
+</div>
+
 In this guide, I will be showing you how to make and run a [Garry's Mod](https://store.steampowered.com/app/4000/Garrys_Mod/) server with **mods** (addons) on both [Windows](https://www.microsoft.com/en-us/windows?r=1) and Linux!
+
+[**View Guide On TMC (Recommended Due To Better Formatting)**](https://forum.moddingcommunity.com/t/how-to-make-a-garrys-mod-server-install-addons-2025/41)
 
 Garry's Mod is a popular sandbox game that thrives off of mods and user-created content, offering a vast library of mods to enhance gameplay. These mods, available on platforms like the [Steam Workshop](https://steamcommunity.com/app/4000/workshop/) and [GitHub](https://github.com/topics/gmod), add unique twists to the gameplay experience, from new maps and tools to entirely custom game modes.
 
@@ -77,9 +85,9 @@ Instructions on downloading and extracting SteamCMD on Windows may be found [her
 
 You should now see a `steamcmd.exe` executable file that you can run to complete the next steps.
 
-![SteamCmd Files](./images/steamcmd_win_dirlist.png)
+![SteamCmd Files](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons/raw/main/images/steamcmd_win_dirlist.png)
 
-![SteamCmd Windows Start](./images/steamcmd_win_start.png)
+![SteamCmd Windows Start](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons/raw/main/images/steamcmd_win_start.png)
 
 ### Linux
 Instructions on downloading and extracting SteamCMD on Linux may be found [here](https://developer.valvesoftware.com/wiki/SteamCMD#Linux). I prefer manually downloading and extracting SteamCMD which is what I will be doing in this guide.
@@ -93,7 +101,7 @@ sudo apt install -y lib32gcc-s1 lib32stdc++6 curl tar
 
 **NOTE** - If you do not have `sudo` installed, you will need to login as root via the `su -` command and execute commands throughout this guide without using `sudo` at the beginning.
 
-![SteamCMD Packages](./images/steamcmd_lin_packages.png)
+![SteamCMD Packages](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons/raw/main/images/steamcmd_lin_packages.png)
 
 While it isn't necessarily *required*, it is also recommended you create a separate user to run SteamCMD and your Garry's Mod server. You may use the following commands on Debian/Ubuntu-based systems to create a new user.
 
@@ -108,7 +116,7 @@ sudo useradd -m -d /home/servers -g servers -s /bin/bash servers
 sudo su servers -
 ```
 
-![SteamCMD New User](./images/steamcmd_lin_newuser.png)
+![SteamCMD New User](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons/raw/main/images/steamcmd_lin_newuser.png)
 
 Next, you'll want to create a directory to store the contents from the `steamcmd_linux.tar.gz` file.
 
@@ -121,7 +129,7 @@ mkdir ~/steamcmd
 cd ~/steamcmd
 ```
 
-![SteamCMD New Directory](./images/steamcmd_lin_newdir.png)
+![SteamCMD New Directory](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons/raw/main/images/steamcmd_lin_newdir.png)
 
 Now, you'll want to download the [`steamcmd_linux.tar.gz`](https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz) file and extract it. I recommend using the `curl` or `wget` commands to download the file and `tar` to extract it. In this guide, we'll be using a one-liner that utilizes `curl` and `tar`.
 
@@ -131,7 +139,7 @@ curl -sqL "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.g
 
 If the command above was successful, you should see a new `steamcmd.sh` file when listing files in the new directory using a command such as `ls -l`.
 
-![SteamCMD Download & Extract](./images/steamcmd_lin_dl.png)
+![SteamCMD Download & Extract](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons/raw/main/images/steamcmd_lin_dl.png)
 
 You can now run the new `steamcmd.sh` program using the following command which'll also update the SteamCMD installation.
 
@@ -139,7 +147,7 @@ You can now run the new `steamcmd.sh` program using the following command which'
 ./steamcmd.sh
 ```
 
-![SteamCMD Start](./images/steamcmd_lin_start.png)
+![SteamCMD Start](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons/raw/main/images/steamcmd_lin_start.png)
 
 ## Downloading The Server Files
 Once you've launched SteamCMD, the first thing you'll need to do is set the directory where to install the Garry's Mod server files to via the `force_install_dir` command. In this guide, we will be installing the server inside of a directory called `gmod/` within whatever directory or folder we create for SteamCMD. Therefore, we'll be setting `force_install_dir` to `/home/servers/gmod` on Linux (or `E:\servers\gmod` on Windows).
@@ -220,7 +228,7 @@ Once you've saved the file, you will also want to give the user permission to ex
 chmod u+x start-server.sh
 ```
 
-![Server Start Linux](./images/server_lin_listdir.png)
+![Server Start Linux](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons/raw/main/images/server_lin_listdir.png)
 
 Finally, you can start the server using the following command.
 
@@ -228,7 +236,7 @@ Finally, you can start the server using the following command.
 ./start-server.sh
 ```
 
-![Server Start Linux #2](./images/server_lin_start.png)
+![Server Start Linux #2](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons/raw/main/images/server_lin_start.png)
 
 **NOTE** - You should see a `VAC secure mode is activated` message unless if you've specifically disabled VAC. With that said, if you want the server accessible from the Internet, you should also see a `Public IP is <your WAN IP>` message which is stripped out of the screenshot above.
 
@@ -244,7 +252,7 @@ First, let's install the screen package. You may need to log out of the current 
 sudo apt install -y screen
 ```
 
-![Screen Install](./images/screen_lin_install.png)
+![Screen Install](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons/raw/main/images/screen_lin_install.png)
 
 Next, copy the server startup command and add `screen -S <name>` in-front. Here is an example.
 
@@ -317,27 +325,27 @@ The first thing we'll want to do is create a collection. You can do this within 
 
 Firstly, navigate to **Community** -> **Workshop**.
 
-![Workshop Community Tab](./images/workshop_maindropdown.png)
+![Workshop Community Tab](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons/raw/main/images/workshop_maindropdown.png)
 
 Next, you'll want to type in **Garry's Mod** where it says "Search for a Workshop". You can click the item from the drop-down menu.
 
-![Workshop Search For Garry's Mod](./images/workshop_selectgmod.png)
+![Workshop Search For Garry's Mod](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons/raw/main/images/workshop_selectgmod.png)
 
 Now, click the **Browse** drop-down menu near the left-middle of the screen and click **Collections**.
 
-![Workshop Click Browse And Collections](./images/workshop_selcollections.png)
+![Workshop Click Browse And Collections](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons/raw/main/images/workshop_selcollections.png)
 
 Afterwards, click the **Create Collection**.
 
-![Workshop Create Collection](./images/workshop_createcolbutton.png)
+![Workshop Create Collection](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons/raw/main/images/workshop_createcolbutton.png)
 
 You'll want to then fill out all fields on the page. In this guide, the title will simply be "Test Collection".
 
-![Workshop Create #1](./images/workshop_createcol01.png)
+![Workshop Create #1](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons/raw/main/images/workshop_createcol01.png)
 
 Finally, click the **Save and continue** button on the bottom-right to create the collection.
 
-![Workshop Create #2](./images/workshop_createcol02.png)
+![Workshop Create #2](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons/raw/main/images/workshop_createcol02.png)
 
 **NOTE** - If the collection is published and visible to others, users will be able to subscribe to all mods/addons from the collection with one click.
 
@@ -350,11 +358,11 @@ After finding the item(s) you're interested in adding to the collection, open th
 
 This will bring up a checkbox list of all collections you own. Ensure to check the collection you want the mod/addon added to and click **Ok**.
 
-![Workshop Add To Collection](./images/workshop_addtocol.png)
+![Workshop Add To Collection](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons/raw/main/images/workshop_addtocol.png)
 
 Next, we'll need to extract the ID from the URL. The numeric ID is located after the `id` query parameter in the URL.
 
-![Workshop Addon URL](./images/workshop_modurl.png)
+![Workshop Addon URL](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons/raw/main/images/workshop_modurl.png)
 
 For example:
 
@@ -407,11 +415,11 @@ resource.AddWorkshop("1431419203")
 ### Publishing The Collection
 You will now need to publish the collection. Head back to the collection you've created and click the **Publish** button.
 
-![Workshop Publish](./images/workshop_pubcol.png)
+![Workshop Publish](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons/raw/main/images/workshop_pubcol.png)
 
 Next, you'll want to extract the ID of the collection by using a similar process to extracting the ID of a mod/addon. The numeric ID is located after the `id` query parameter in the URL when viewing your collection.
 
-![Workshop Get Collection ID](./images/workshop_getcolid.png)
+![Workshop Get Collection ID](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons/raw/main/images/workshop_getcolid.png)
 
 For example:
 
@@ -461,15 +469,15 @@ I'm going to use my server's internal hostname which is simply `x-gs01` under my
 connect x-gs01
 ```
 
-![Garry's Mod Downloads](./images/gmod_connect.png)
+![Garry's Mod Downloads](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons/raw/main/images/gmod_connect.png)
 
 Once you start connecting, if your Garry's Mod client doesn't have the client-side files of the addons/mods you've added to your collection, it should download these files automatically as seen below.
 
-![Garry's Mod Downloads](./images/gmod_dladdons.png)
+![Garry's Mod Downloads](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons/raw/main/images/gmod_dladdons.png)
 
 Once you've fully connected, the addons you've installed should be running on the server. In my case, gDisaster adds a tab to the menu where I can spawn natural disasters!
 
-![gDisaster Menu Item](./images/gmod_gdisasters.png)
+![gDisaster Menu Item](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons/raw/main/images/gmod_gdisasters.png)
 
 **NOTE** - To spawn items from mods/addons through the spawn menu, you may need to add yourself as an admin to the server. To do this, read [here](#how-do-i-add-myself-as-an-admin-on-the-server).
 
@@ -549,6 +557,6 @@ I just wanted to provide some helpful resources and tools for server owners who 
 ## Conclusion
 That sums up this guide, but I hope to create many more guides in the future! By this point, you should have a functioning Garry's Mod server with one or more mods/addons installed.
 
-If you see anything that can be improved on or added, please feel free to reply to the [thread](https://moddingcommunity.com/topic/221-how-to-make-a-garrys-mod-server-with-mods-addons/)!
+If you have any questions or feedback regarding this guide, please reply to its forum topic [here](https://forum.moddingcommunity.com/t/how-to-make-a-garrys-mod-server-install-addons-2025/41)! This guide will be worked and improved on over time.
 
-Guide made by [Christian Deacon](https://github.com)
+Join our [Discord server](https://discord.moddingcommunity.com)!
