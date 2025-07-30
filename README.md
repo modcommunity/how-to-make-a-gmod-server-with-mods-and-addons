@@ -481,7 +481,7 @@ Once you've fully connected, the addons you've installed should be running on th
 
 **NOTE** - To spawn items from mods/addons through the spawn menu, you may need to add yourself as an admin to the server. To do this, read [here](#how-do-i-add-myself-as-an-admin-on-the-server).
 
-## Frequenty Asked Questions
+## Frequently Asked Questions
 ### How do I add myself as an admin on the server?
 Many people recommend installing separate mods/addons to handle admin and group functionality such as [ULX](https://github.com/TeamUlysses/ulx) and [ULib](https://github.com/TeamUlysses/ulib). However, there is also a way to set a user to admin without additional addons.
 
