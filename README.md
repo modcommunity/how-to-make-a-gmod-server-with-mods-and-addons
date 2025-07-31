@@ -1,12 +1,6 @@
-<div align="center">
-
-![Banner](https://github.com/modcommunity/how-to-make-a-gmod-server-with-mods-and-addons/raw/main/images/banner.png)
-
-</div>
-
 A guide on how to set up a [Garry's Mod](https://store.steampowered.com/app/4000/Garrys_Mod/) server and download and install **mods** (addons) on both [Windows](https://www.microsoft.com/en-us/windows?r=1) and Linux!
 
-[**View Guide On TMC (Recommended Due To Better Formatting)**](https://forum.moddingcommunity.com/t/how-to-make-a-garrys-mod-server-install-addons-2025/41)
+[**View Guide On TMC (Recommended Due To Better Formatting)**](https://blog.moddingcommunity.com/how-to-make-a-gmod-server-install-mods-addons/)
 
 Garry's Mod is a popular sandbox game that thrives off of mods and user-created content, offering a vast library of mods to enhance gameplay. These mods, available on platforms like the [Steam Workshop](https://steamcommunity.com/app/4000/workshop/) and [GitHub](https://github.com/topics/gmod), add unique twists to the gameplay experience, from new maps and tools to entirely custom game modes.
 
@@ -557,6 +551,6 @@ I just wanted to provide some helpful resources and tools for server owners who 
 ## Conclusion
 That sums up this guide, but I hope to create many more guides in the future! By this point, you should have a functioning Garry's Mod server with one or more mods/addons installed.
 
-If you have any questions or feedback regarding this guide, please reply to its forum topic [here](https://forum.moddingcommunity.com/t/how-to-make-a-garrys-mod-server-install-addons-2025/41)! This guide will be worked and improved on over time.
+If you have any questions or feedback regarding this guide, please reply to its forum topic [here](https://forum.moddingcommunity.com/t/how-to-make-a-garrys-mod-server-install-mods-addons-2025/504)! This guide will be worked and improved on over time.
 
 Join our [Discord server](https://discord.moddingcommunity.com)!
